@@ -21,7 +21,7 @@
             });
     }
 
-    angular
+    angular // Why? 
         .module('blocJams', ['ui.router'])
         .config(config);
 })();
