@@ -8,7 +8,7 @@
     
         $stateProvider
             .state('landing', { 
-                url: '/', // I don't think I need '/' like the directions say since nothing else comes before this. !! 
+                url: '/', // gives browser a url it can bookmark. changes the way the html renders depending on which url or state it uses. 
                 templateUrl: '/templates/landing.html' // '/templates/landing'
             })
             .state('album', {
@@ -19,7 +19,7 @@
                 url: '/collection', // !! same
                 templateUrl: '/templates/collection.html' // !! same
             });
-    }
+    } 
 
     angular // Why? 
         .module('blocJams', ['ui.router'])
