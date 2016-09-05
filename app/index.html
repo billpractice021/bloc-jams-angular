@@ -15,7 +15,7 @@
     </head>
     <body>
         <nav class="navbar">
-            <a ui-sref="index.html" class="logo">  
+            <a ui-sref="landing" class="logo"> <!-- landing was index.html before. maybe this fixes problem --> 
                 <img src="assets/images/bloc_jams_logo.png" alt="bloc jams logo">
             </a>
             <div class="links-container">
@@ -26,5 +26,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> <!--can use bower comoponents instead -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
         <script src="/scripts/app.js"></script>
+        <script src="/scripts/controllers/LandingCtrl.js"></script>
+        <script src="/scripts/controllers/CollectionCtrl.js"></script>
+        <script src="/scripts/controllers/AlbumCtrl.js"></script>
+        <script src="/scripts/fixtures.js"></script>
     </body>
 </html>

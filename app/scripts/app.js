@@ -8,7 +8,8 @@
     
         $stateProvider
             .state('landing', { 
-                url: '/', // gives browser a url it can bookmark. changes the way the html renders depending on which url or state it uses. 
+                url: '/', // gives browser a url it can bookmark. changes the way the html renders depending on which url or state it uses.
+                controller: 'LandingCtrl as landing',
                 templateUrl: '/templates/landing.html' // '/templates/landing'
             })
             .state('album', {
@@ -17,6 +18,7 @@
             })
             .state('collection', {
                 url: '/collection', // !! same
+                controller: 'CollectionCtrl as collection',
                 templateUrl: '/templates/collection.html' // !! same
             });
     } 
