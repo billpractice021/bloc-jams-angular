@@ -83,9 +83,9 @@
                 song.playing = true; 
             } else if (SongPlayer.currentSong === song) {
                 if (currentBuzzObject.isPaused()) {
-                    currentBuzzObject.play(); 
+                    currentBuzzObject.play();
                 }
-            }
+            }         
         };
         
         /**
@@ -109,7 +109,7 @@
             
             if (currentSongIndex < 0) {
                 currentBuzzObject.stop();
-                SongPlayer.currentSong.playing = null;
+                SongPlayer.currentSong.playing = null; // Is this right? just like the next funciton as well? 
             } else {
                 var song = currentAlbum.songs[currentSongIndex];
                 setSong(song);
@@ -128,7 +128,8 @@
             var lastSongIndex = currentAlbum.songs.length - 1;
 
             if (currentSongIndex > lastSongIndex) {
-                stopSong(SongPlayer.currentSong);
+                currentBuzzObject.stop();
+                SongPlayer.currentSong.playing = null; // Is this right?
             } else {
                 var song = currentAlbum.songs[currentSongIndex];
                 setSong(song);
